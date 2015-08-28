@@ -53,5 +53,3 @@ gem "palindrome"
 gem "fibonacci"
 
 gem 'angular_rails_csrf'
-
-gem "heroku"
