@@ -64,6 +64,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.11.2)
     palindrome (1.0.0)
+    pg (0.18.2)
     polyglot (0.3.5)
     rack (1.5.5)
     rack-test (0.6.3)
@@ -135,6 +136,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   palindrome
+  pg
   rails (= 4.0.1)
   sass-rails (~> 4.0.0)
   sdoc
