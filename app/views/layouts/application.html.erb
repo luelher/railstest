@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Railstest</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body ng-app="railstest" ng-controller="PrincipalController">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Rails Test - Luis Hernández</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#fibonacci">Fibonacci</a></li>
+            <li><a href="#palindrome">Palindrome</a></li>
+            <li><a href="#unos">Número de Unos</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <ui-view></ui-view>
+      </div>
+
+    </div> <!-- /container -->
+
+<script type="text/ng-template" id="/home.html">
+  <h1>EJ: {{test}}</h1>
+</script>
+
+<script type="text/ng-template" id="/fibonacci.html">
+      <h1>FIBONACCI SERIES CHALLENGE DESCRIPTION:</h1>
+      <p> 
+      The Fibonacci series is defined as: F(0) = 0; F(1) = 1; F(n) = F(n–1) + F(n–2) when n>1. Given an
+      integer n≥0, print out the F(n).
+      </p>
+
+      <form ng-submit="clickFibonacci()"
+        style="margin-top:30px;" name="form">
+        <h3>Archivo a ser analizado</h3>
+
+        <div class="form-group">
+          <div class="button" ngf-select ng-model="archivo" name="file" ngf-max-size="1MB" ngf-min-height="100">Seleccionar Archivo</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Analizar</button>
+      </form>
+
+      <div ng-if="data.length>0">
+        <h3>Resultado</h3>
+        <ul>
+          <li ng-repeat="d in data">
+            {{d.num}}: {{d.result}}
+          </li>
+        </ul>
+      </div>
+      <div ng-if="error!=''">
+      <h3>
+        {{error}}
+      </h3>
+      </div>
+
+</script>
+
+<script type="text/ng-template" id="/palindrome.html">
+
+      <h1>PRIME PALINDROME CHALLENGE DESCRIPTION:</h1>
+      <p> 
+      Write a program which determines the largest prime palindrome less than 1000.
+      </p>
+
+      <form ng-submit="clickPalindrome()"
+        style="margin-top:30px;" name="form">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <div ng-if="data.length>0">
+        <h3>Resultado</h3>
+        <ul>
+          <li ng-repeat="d in data">
+            {{d.num}}: {{d.result}}
+          </li>
+        </ul>
+      </div>
+
+
+</script>
+
+<script type="text/ng-template" id="/unos.html">
+      <h1>NUMBER OF ONES CHALLENGE DESCRIPTION:</h1>
+      <p> 
+      Write a program which determines the number of 1 bits in the internal representation of a given integer.
+      </p>
+
+      <form ng-submit="clickUnos()"
+        style="margin-top:30px;" name="form">
+        <input type="text" class="form-control" placeholder="Número" ng-model="numero">
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+      <div ng-if="data.length>0">
+        <h3>Resultado</h3>
+        <ul>
+          <li ng-repeat="d in data">
+            El numero {{d.num}} tiene {{d.result}} unos
+          </li>
+        </ul>
+      </div>
+
+      <div ng-if="error!=''">
+      <h3>
+        {{error}}
+      </h3>
+      </div>
+
+
+</script>
+
+
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
