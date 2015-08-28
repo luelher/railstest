@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ejercicio práctico del uso de AngularJS con Rails 4.
 
-Things you may want to cover:
+Aplicación que genera:
+- Series de fibonacci
+- Primo Palindromos
+- Número de "unos" (1) en un numero en formato binario.
 
-* Ruby version
+== Instalación
 
-* System dependencies
+* clone
+* Instalar rvm 
+* Entrar en la carpeta del proyecto
+* instalar ruby
+* instalar bundle
+* bundle install
+* rails s
 
-* Configuration
+Listo!!!
 
-* Database creation
+Si tienes sugerencias escribir al correo luelher@gmail.com
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Happy Coding!!!!
