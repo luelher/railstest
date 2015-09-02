@@ -1,6 +1,6 @@
 require 'fibonacci'
 
-pust "Generando Números de Fibonacci desde un Archivo de Texto"
+puts "Generando Números de Fibonacci desde un Archivo de Texto"
 puts ""
 puts "Introduzca la Dirección del Archivo a Analizar:"
 dir = gets.chomp
